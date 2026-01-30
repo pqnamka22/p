@@ -22,4 +22,153 @@
             <h1 class="text-5xl font-bold mb-4 gold-gradient bg-clip-text text-transparent">
                 🐍 GOLDEN COBRA NFT COLLECTION
             </h1>
-            <p class="text-xl text-yellow-200">Эксклюзивные награды для истинных ц
+            <p class="text-xl text-yellow-200">Эксклюзивные награды для истинных ценителей статуса</p>
+        </header>
+
+        <!-- Статистика сообщества -->
+        <div class="bg-gray-900 rounded-xl p-6 mb-8 border-2 border-yellow-600">
+            <h2 class="text-2xl font-bold mb-4 text-yellow-300">🔥 ЦЕЛЬ СООБЩЕСТВА</h2>
+            <div class="mb-4">
+                <div class="flex justify-between text-sm mb-1">
+                    <span>До следующей награды:</span>
+                    <span>75,432 / 100,000 XTR</span>
+                </div>
+                <div class="w-full bg-gray-700 rounded-full h-4">
+                    <div class="gold-gradient h-4 rounded-full" style="width: 75.4%"></div>
+                </div>
+            </div>
+            <p class="text-yellow-200">При достижении 100K XTR — розыгрыш 10 эксклюзивных NFT от Telegram!</p>
+        </div>
+
+        <!-- Коллекция NFT -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- NFT Item 1 -->
+            <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden border-2 border-yellow-500 hover:border-yellow-300 transition-all duration-300">
+                <div class="p-2 gold-gradient">
+                    <div class="bg-black p-4 rounded-lg">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">👑</span>
+                            <h3 class="text-xl font-bold mt-2">Золотая Корона</h3>
+                            <p class="text-yellow-300">Топ-1 в рейтинге</p>
+                        </div>
+                        <p class="text-gray-300 mb-4">Доступна только пользователю, занявшему первое место в рейтинге по трате звёзд</p>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold gold-gradient bg-clip-text text-transparent">
+                                50,000 XTR
+                            </div>
+                            <button class="mt-4 w-full py-3 gold-gradient text-black font-bold rounded-lg hover:opacity-90 transition">
+                                КУПИТЬ СТАТУС
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NFT Item 2 -->
+            <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden border-2 border-purple-500 hover:border-purple-300 transition-all duration-300">
+                <div class="p-2 bg-gradient-to-r from-purple-600 to-pink-600">
+                    <div class="bg-black p-4 rounded-lg">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🚀</span>
+                            <h3 class="text-xl font-bold mt-2">Ракета Telegram</h3>
+                            <p class="text-purple-300">Эксклюзив от Telegram</p>
+                        </div>
+                        <p class="text-gray-300 mb-4">Особая анимация в чатах и эксклюзивный бейдж в профиле</p>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                                25,000 XTR
+                            </div>
+                            <button class="mt-4 w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-lg hover:opacity-90 transition">
+                                ПРИОБРЕСТИ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NFT Item 3 -->
+            <div class="bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden border-2 border-blue-500 hover:border-blue-300 transition-all duration-300">
+                <div class="p-2 bg-gradient-to-r from-blue-600 to-cyan-600">
+                    <div class="bg-black p-4 rounded-lg">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">💎</span>
+                            <h3 class="text-xl font-bold mt-2">Алмазный Cobra</h3>
+                            <p class="text-blue-300">Легендарный статус</p>
+                        </div>
+                        <p class="text-gray-300 mb-4">Особый значок и доступ к закрытому каналу с создателями</p>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                                100,000 XTR
+                            </div>
+                            <button class="mt-4 w-full py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold rounded-lg hover:opacity-90 transition">
+                                СТАТЬ ЛЕГЕНДОЙ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Рейтинг пользователей -->
+        <div class="mt-12 bg-gray-900 rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-6 text-center text-yellow-300">🏆 ТОП-10 ПОТРАТИВШИХ</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-yellow-600">
+                            <th class="py-3 text-left">Место</th>
+                            <th class="py-3 text-left">Пользователь</th>
+                            <th class="py-3 text-left">Потрачено XTR</th>
+                            <th class="py-3 text-left">Ранг</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard">
+                        <!-- Данные загружаются через JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Симуляция данных рейтинга
+        const leaderboardData = [
+            { position: 1, username: "@rich_king", spent: 15245, rank: "Император" },
+            { position: 2, username: "@cobra_master", spent: 12450, rank: "Мастер" },
+            { position: 3, username: "@gold_hunter", spent: 9876, rank: "Охотник" },
+            { position: 4, username: "@star_burner", spent: 7654, rank: "Сжигатель" },
+            { position: 5, username: "@wealth_display", spent: 6543, rank: "Показушник" }
+        ];
+
+        function loadLeaderboard() {
+            const tbody = document.getElementById('leaderboard');
+            tbody.innerHTML = '';
+            
+            leaderboardData.forEach(user => {
+                const row = document.createElement('tr');
+                row.className = 'border-b border-gray-700 hover:bg-gray-800';
+                row.innerHTML = `
+                    <td class="py-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-2">${user.position === 1 ? '👑' : user.position}</span>
+                        </div>
+                    </td>
+                    <td class="py-4 font-medium">${user.username}</td>
+                    <td class="py-4">
+                        <span class="text-yellow-300 font-bold">${user.spent.toLocaleString()} XTR</span>
+                    </td>
+                    <td class="py-4">
+                        <span class="px-3 py-1 rounded-full bg-yellow-900 text-yellow-300 text-sm">
+                            ${user.rank}
+                        </span>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', loadLeaderboard);
+    </script>
+</body>
+</html>
