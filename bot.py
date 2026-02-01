@@ -19,7 +19,7 @@ from aiogram.dispatcher.router import Router
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = os.getenv('BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')
+BOT_TOKEN = os.getenv('8536282991:AAHUyTx0r7Q03bwDRokvogbmJAIbkAnYVpM', '8536282991:AAHUyTx0r7Q03bwDRokvogbmJAIbkAnYVpM')
 
 def get_web_app_url():
     # Same as before
